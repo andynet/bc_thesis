@@ -1,0 +1,273 @@
+% v0.1
+\documentclass[12pt, oneside]{book}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=3.5cm,right=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[hidelinks,breaklinks]{hyperref}
+% \usepackage[slovak]{babel} % vypnite pre prace v anglictine
+\linespread{1.25} % hodnota 1.25 by mala zodpovedat 1.5 riadkovaniu
+
+% -------------------
+% --- Definicia zakladnych pojmov
+% --- Vyplnte podla vasho zadania
+% -------------------
+\def\mfrok{2018}
+\def\mfnazov{Sequence based classification of bacteriophages}
+\def\mftyp{Bachelor Thesis}
+\def\mfautor{Andrej Baláž}
+\def\mfskolitel{Mgr. Jaroslav Budiš}
+
+%ak mate konzultanta, odkomentujte aj jeho meno na titulnom liste
+\def\mfkonzultant{tit. Meno Priezvisko, tit. }  
+
+\def\mfmiesto{Bratislava, \mfrok}
+
+%aj cislo odboru je povinne a je podla studijneho odboru autora prace
+\def\mfodbor{Informatics and Biology}
+\def\program{ Bioinformatics }
+\def\mfpracovisko{ Department of Computer Science }
+
+\begin{document}     
+\frontmatter
+
+
+% -------------------
+% --- Obalka ------
+% -------------------
+\thispagestyle{empty}
+
+\begin{center}
+\sc\large
+Comenius University, Bratislava\\
+Faculty of Mathematics, Physics and Informatics
+
+\vfill
+
+{\LARGE\mfnazov}\\
+\mftyp
+\end{center}
+
+\vfill
+
+{\sc\large 
+\noindent \mfrok\\
+\mfautor
+}
+
+\eject % EOP i
+% --- koniec obalky ----
+
+% -------------------
+% --- Titulný list
+% -------------------
+
+\thispagestyle{empty}
+\noindent
+
+\begin{center}
+\sc  
+\large
+Comenius University, Bratislava\\
+Faculty of Mathematics, Physics and Informatics
+
+\vfill
+
+{\LARGE\mfnazov}\\
+\mftyp
+\end{center}
+
+\vfill
+
+\noindent
+\begin{tabular}{ll}
+Study programme: & \program \\
+Study field: & \mfodbor \\
+Department: & \mfpracovisko \\
+Supervisor: & \mfskolitel \\
+% Konzultant: & \mfkonzultant \\
+\end{tabular}
+
+\vfill
+
+
+\noindent \mfmiesto\\
+\mfautor
+
+\eject % EOP i
+
+
+% --- Koniec titulnej strany
+
+
+% -------------------
+% --- Zadanie z AIS
+% -------------------
+% v tlačenej verzii s podpismi zainteresovaných osôb.
+% v elektronickej verzii sa zverejňuje zadanie bez podpisov
+
+\newpage
+\thispagestyle{empty}
+\hspace{-2cm}\includegraphics[width=1.1\textwidth]{images/{zadanie.en}.pdf}
+
+\newpage
+\thispagestyle{empty}
+\hspace{-2cm}\includegraphics[width=1.1\textwidth]{images/{zadanie.sk}.pdf}
+
+% --- Koniec zadania
+
+\frontmatter
+
+% -------------------
+%   Poďakovanie - nepovinné
+% -------------------
+\setcounter{page}{3}
+\newpage 
+~
+
+\vfill
+{\bf Acknowledgement:}
+I would like to thank my supervisor Mgr. Jaroslav Budiš for his guidance during the work on this thesis and also during my career in the field of bioinformatics.
+His patience and his challenging tasks created great environment for my learning and development.
+I would also like to thank my colleagues for their inspiring conversations and advices.
+I am also thankful to doc. Mgr. Bronislava Brejová, PhD. and doc. Mgr. Tomáš Vinař, PhD. for their comments on my work, which helped to improve its quality.
+Special thanks for my family and friends for their support during my studies.
+% Tu môžete poďakovať školiteľovi, prípadne
+% ďalším osobám, ktoré vám s prácou nejako pomohli, poradili,
+% poskytli dáta a podobne.
+
+% --- Koniec poďakovania
+
+% -------------------
+% --- Abstrakt - Anglicky 
+% -------------------
+\newpage
+
+\section*{Abstract}
+
+Bacteriophages are viral particles that infect and replicate inside bacterial organisms. Since they are specific to a
+particular strain of bacteria, advances in their research could lead to novel means of targeted treatment without
+adverse effects on natural microbiome in patient’s body. Moreover, this treatment could be effective against
+bacterial strains with antibiotic resistance. We consider as one of the main bottlenecks of bacteriophage research the
+inability to cultivate some of the phages due to missing information about their hosts and insufficient description of
+their genes. We aim to address this issue with our bioinformatics pipeline which can predict bacteriophage hosts
+from genomic sequence and which can give us additional information about gene importance for their function.
+
+\paragraph*{Keywords:} bacteriophage, bioinformatics, host prediction 
+
+% --- Koniec Abstrakt - Anglicky
+
+% -------------------
+%   Abstrakt - Slovensky
+% -------------------
+\newpage
+\section*{Abstrakt}
+
+Bakteriofágy sú vírusové častice, ktoré infikujú baktérie a replikujú sa v nich. Pretože sú vysoko špecifické na konkrétny kmeň baktérií, pokrok v ich výskume by mohol viesť k novým prostriedkom liečby bakteriálnych infekcií bez vedľajších účinkov na prirodzený mikrobióm pacienta. Taktiež by táto liečba mohla byť efektívna proti multirezistentným baktériám. Pokladáme za jedno z hlavných úskalí vo vývoji týchto metód neschopnosť kultivácie niektorých bakteriofágov s chýbajúcimi informáciami o ich hostiteľoch a nedostatočný popis ich génov. Tento problém sa snažíme riešiť v našej práci bioinformatickou metódou určenou na predikciu hostiteľov z genomickej sekvencie bakteriofágov. Tento postup nám tiež umožňuje získať informácie o dôležitosti jednotlivých génov pre funkciu bakteriofágov.
+
+\paragraph*{Kľúčové slová:} bakteriofágy, bioinformatika, predikcia hostiteľa
+% --- Koniec Abstrakt - Slovensky
+
+% -------------------
+% --- Predhovor - v informatike sa zvacsa nepouziva
+% -------------------
+%\newpage 
+%\thispagestyle{empty}
+%
+%\huge{Predhovor}
+%\normalsize
+%\newline
+%Predhovor je všeobecná informácia o práci, obsahuje hlavnú charakteristiku práce 
+%a okolnosti jej vzniku. Autor zdôvodní výber témy, stručne informuje o cieľoch 
+%a význame práce, spomenie domáci a zahraničný kontext, komu je práca určená, 
+%použité metódy, stav poznania; autor stručne charakterizuje svoj prístup a svoje 
+%hľadisko. 
+%
+% --- Koniec Predhovor
+
+
+% -------------------
+% --- Obsah
+% -------------------
+
+\newpage 
+
+\tableofcontents
+
+% ---  Koniec Obsahu
+
+% -------------------
+% --- Zoznamy tabuliek, obrázkov - nepovinne
+% -------------------
+
+\newpage 
+
+\listoffigures
+\listoftables
+
+% ---  Koniec Zoznamov
+
+\mainmatter
+
+\input introduction.tex
+\input chapter1.tex
+\input chapter2.tex
+\input chapter3.tex
+\input chapter4.tex
+\input conclusion.tex
+
+% -------------------
+% --- Bibliografia
+% -------------------
+
+
+\newpage	
+
+\backmatter
+
+\thispagestyle{empty}
+\nocite{*}
+\clearpage
+
+%\bibliographystyle{plain}
+\bibliographystyle{unsrt}
+\bibliography{literature}
+
+%Prípadne môžete napísať literatúru priamo tu
+%\begin{thebibliography}{5}
+ 
+%\bibitem{br1} MOLINA H. G. - ULLMAN J. D. - WIDOM J., 2002, Database Systems, Upper Saddle River : Prentice-Hall, 2002, 1119 s., Pearson International edition, 0-13-098043-9
+
+%\bibitem{br2} MOLINA H. G. - ULLMAN J. D. - WIDOM J., 2000 , Databasse System implementation, New Jersey : Prentice-Hall, 2000, 653s., ???
+
+%\bibitem{br3} ULLMAN J. D. - WIDOM J., 1997, A First Course in Database Systems, New Jersey : Prentice-Hall, 1997, 470s., 
+
+%\bibitem{br4} PREFUSE, 2007, The Prefuse visualization toolkit,  [online] Dostupné na internete: <http://prefuse.org/>
+
+%\bibitem{br5} PREFUSE Forum, Sourceforge - Prefuse Forum,  [online] Dostupné na internete: <http://sourceforge.net/projects/prefuse/>
+
+%\end{thebibliography}
+
+%---koniec Referencii
+
+% -------------------
+%--- Prilohy---
+% -------------------
+
+%Nepovinná časť prílohy obsahuje materiály, ktoré neboli zaradené priamo  do textu. Každá príloha sa začína na novej strane.
+%Zoznam príloh je súčasťou obsahu.
+%
+%\addcontentsline{toc}{chapter}{Appendix A}
+%\input AppendixA.tex
+%
+%\addcontentsline{toc}{chapter}{Appendix B}
+%\input AppendixB.tex
+
+\end{document}
+
+
+
+
+
+
